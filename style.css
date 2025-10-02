@@ -67,7 +67,6 @@ display: block;
 
 .categories{
     padding:5px;
-   
     display: flex;
     justify-content: space-around;
     border-bottom: solid black 1px;
@@ -78,14 +77,20 @@ display: block;
     padding:8px;
     border-radius: 30px;
     color:white;
-    
+    border:solid #A435F0 1px;
+
+}
+.categories p:hover{
+    background-color: transparent;
+    border:solid #A435F0 1px;
+color:black;
+cursor: pointer;
 }
 .sale-img{
 position: relative;
 }
 .sale-img img {
     width:100%;
-
 }
 .sale-img__offer{
     width: 35%;
@@ -95,7 +100,21 @@ position: relative;
 position:absolute;
 top:8%;
 left:10%;
+animation-name:zoom;
+animation-duration: 2s;
+opacity: 0;
+animation-fill-mode: forwards;
 
+}
+@keyframes zoom{
+    0%{
+        opacity: 0;
+        transform: scale(0);
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 .recommended{
     padding: 10px;
